@@ -1,4 +1,5 @@
 #!/bin/bash
 echo DISCORD_TOKEN=$(aws ssm get-parameters --output text --region us-west-1 --name DISCORD_TOKEN --with-decryption --query Parameters[0].Value) >> /home/ubuntu/DFP_Discord_Bot/.env
 cd /home/ubuntu/DFP_Discord_Bot
-python3 DFPB.py
+python3 DFPB.py > /dev/null 2> /dev/null < /dev/null &
+sleep 180
