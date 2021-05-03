@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /home/ubuntu/DFP_Discord_Bot
+python3 DFPB.py

@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+ - source: .
+   destination: /home/ubuntu/DFP_Discord_Bot
+hooks:
+  AfterInstall:
+   - location: scripts/install_bot_dependencies
+     timeout: 300
+     runas: root
+  ApplicationStart:
+   - location: scripts/start_bot
+     timeout: 300
+     runas: root
